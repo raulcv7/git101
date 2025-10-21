@@ -3,17 +3,17 @@ name: Flask App Validation
 on:
   push:
     paths:
-      - "2025/flask_app/**"
+      - "2025/**"
   pull_request:
     paths:
-      - "2025/flask_app/**"
+      - "2025/**"
 
 jobs:
   test:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: 2025/flask_app
+        working-directory: 2025
 
     steps:
       - name: Checkout repository

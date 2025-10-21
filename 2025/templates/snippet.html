@@ -1,8 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-<h2 class="text-2xl font-semibold mb-2">{{ snippet.title }}</h2>
-<p class="text-gray-600 mb-4">by {{ snippet.author }}</p>
-<pre class="bg-gray-900 text-green-300 p-4 rounded-lg"><code>{{ snippet.code }}</code></pre>
-<p class="mt-4">{{ snippet.description }}</p>
-<a href="{{ url_for('index') }}" class="text-blue-500 hover:underline mt-4 block">← Back to snippets</a>
+<div class="bg-surfaceLight p-8 rounded-2xl shadow-lg">
+  <h2 class="text-2xl font-bold text-primary mb-2">{{ snippet.title }}</h2>
+  <p class="text-gray-400 mb-4">by {{ snippet.author }}</p>
+
+  <pre class="bg-gray-900 text-green-300 p-4 rounded-lg overflow-x-auto"><code>{{ snippet.code }}</code></pre>
+
+  <p class="mt-4 text-gray-300">{{ snippet.description }}</p>
+
+  <a href="{{ url_for('index') }}" class="text-indigo-400 hover:text-indigo-300 hover:underline mt-6 inline-block transition">Back to all snippets</a>
+</div>
 {% endblock %}
