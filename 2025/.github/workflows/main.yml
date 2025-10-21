@@ -1,0 +1,9 @@
+name: Validate snippets
+on: [pull_request, push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check JSON files
+        run: python -m json.tool snippets/*.json

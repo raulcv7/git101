@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="text-2xl font-semibold mb-2">{{ snippet.title }}</h2>
+<p class="text-gray-600 mb-4">by {{ snippet.author }}</p>
+<pre class="bg-gray-900 text-green-300 p-4 rounded-lg"><code>{{ snippet.code }}</code></pre>
+<p class="mt-4">{{ snippet.description }}</p>
+<a href="{{ url_for('index') }}" class="text-blue-500 hover:underline mt-4 block">← Back to snippets</a>
+{% endblock %}
