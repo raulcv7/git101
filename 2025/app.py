@@ -20,7 +20,7 @@ def index():
   snippets = load_snippets()
   return render_template("index.html", snippets=snippets)
 
-@app.route("/snippet/<slug>")
+@app.route("/snippet/<slug>.html")
 def snippet(slug):
     path = os.path.join("snippets", f"{slug}.json")
     if not os.path.exists(path):
